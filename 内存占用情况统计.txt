@@ -1,0 +1,56 @@
+model            RES           SHR
+
+tf.pb               3425M     988 M
+trt-float32       2770M    1065M
+trt-fp16           2077M    741  M
+trt-int8            2118M     776 M
+
+model            RES           SHR
+
+tf.pb               3425M     988 M
+trt-float32       2770M    1065M
+trt-fp16           2097       754
+
+
+trt-int8           2175     827 M
+                      2130     789
+
+
+
+tf.pb              2382
+trt-float32     2066
+trt-fp16         1460 
+trt-int8          1460
+--------------------------------------------
+
+tf.pb             2122M
+trt-float32     624M
+trt-fp16         10M
+trt-int8          9M
+
+
+tf.pb             M
+trt-float32     2099M  20ms
+trt-fp16         1481M  6.8ms
+trt-int8          1480M   4.0ms
+
+
+tf.pb             M
+trt-float32     712M  20ms
+trt-fp16        30M  6.8ms
+trt-int8          27M   4.0ms
+
+tf.pb             1312M 46ms
+trt-float32     519M  20ms
+trt-fp16         220M  7ms
+trt-int8          154M   4.0ms
+
+
+
+
+-----------------------------------------------------------
+2022-03-24
+              used1           used2
+trt32      2905052        3283980       378928
+trt16      
+trt8

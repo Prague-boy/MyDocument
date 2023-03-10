@@ -1,0 +1,65 @@
+=== Automatically deduced input nodes ===
+[name: "input_tensor"
+op: "Placeholder"
+attr {
+  key: "dtype"
+  value {
+    type: DT_FLOAT
+  }
+}
+attr {
+  key: "shape"
+  value {
+    shape {
+      dim {
+        size: -1
+      }
+      dim {
+        size: 224
+      }
+      dim {
+        size: 224
+      }
+      dim {
+        size: 3
+      }
+    }
+  }
+}
+]
+=========================================
+
+=== Automatically deduced output nodes ===
+[name: "ArgMax"
+op: "ArgMax"
+input: "resnet_model/final_dense"
+input: "ArgMax/dimension"
+attr {
+  key: "T"
+  value {
+    type: DT_FLOAT
+  }
+}
+attr {
+  key: "Tidx"
+  value {
+    type: DT_INT32
+  }
+}
+attr {
+  key: "output_type"
+  value {
+    type: DT_INT64
+  }
+}
+, name: "softmax_tensor"
+op: "Softmax"
+input: "resnet_model/final_dense"
+attr {
+  key: "T"
+  value {
+    type: DT_FLOAT
+  }
+}
+]
+==========================================
